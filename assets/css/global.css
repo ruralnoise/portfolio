@@ -1,0 +1,428 @@
+* {
+	box-sizing: border-box;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: 'ALS Sirius';
+	src: url('/assets/fonts/ALSSirius-Medium.woff2') format('woff2'),
+		url('/assets/fonts/ALSSirius-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ALS Sirius';
+	src: url('/assets/fonts/ALSSirius-Medium.woff2') format('woff2'),
+		url('/assets/fonts/ALSSirius-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ALS Sirius';
+	src: url('/assets/fonts/ALSSirius-Bold.woff2') format('woff2'),
+		url('/assets/fonts/ALSSirius-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ALS Sirius';
+	src: url('/assets/fonts/ALSSirius-Bold.woff2') format('woff2'),
+		url('/assets/fonts/ALSSirius-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ALS Sirius';
+	src: url('/assets/fonts/ALSSirius-Regular.woff2') format('woff2'),
+		url('/assets/fonts/ALSSirius-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ALS Sirius';
+	src: url('/assets/fonts/ALSSirius-Regular.woff2') format('woff2'),
+		url('/assets/fonts/ALSSirius-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--font-family: "ALS Sirius", sans-serif;
+	--second-family: "Inter", sans-serif;
+}
+
+:root {
+	--main-palette-primary: #161b24;
+	--main-palette-secondary: #717c8d;
+	--main-palette-disabled: #c5cad3;
+	--main-palette-white: #fff;
+	--main-palette-success: #479a78;
+	--main-palette-warning: #d27532;
+	--main-palette-error: #cd5a50;
+	--main-palette-brand: #fee600;
+	--main-palette-accent: #5a82fa;
+	--grey-grey-100: #f4f5f8;
+	--grey-grey-200: #e2e6ec;
+	--grey-grey-300: #d4d9e3;
+	--grey-grey-400: #c5ccda;
+	--grey-grey-500: #b7bfd0;
+	--grey-grey-600: #a8b3c7;
+	--grey-grey-700: #9ba6be;
+	--grey-grey-800: #8c99b4;
+	--grey-grey-900: #7e8cab;
+	--colourful-dubai-dubai: #e6af7d;
+	--colourful-dubai-dubai-180: #50321e;
+	--colourful-dubai-dubai-160: #6e492d;
+	--colourful-dubai-dubai-140: #96643c;
+	--colourful-dubai-dubai-120: #be8250;
+	--colourful-dubai-dubai-80: #ebbe96;
+	--colourful-dubai-dubai-80: #ebbe96;
+	--colourful-dubai-dubai-60: #f0cdaf;
+	--colourful-dubai-dubai-30: #f5e1cd;
+	--colourful-dubai-dubai-10: #faebde;
+	--colourful-tunis-tunis: #ebc8c8;
+	--colourful-tunis-tunis-180: #554346;
+	--colourful-tunis-tunis-160: #735a5a;
+	--colourful-tunis-tunis-140: #967d7d;
+	--colourful-tunis-tunis-120: #b9a0a0;
+	--colourful-tunis-tunis-80: #ebd2d2;
+	--colourful-tunis-tunis-60: #f1dddd;
+	--colourful-tunis-tunis-30: #f5ebeb;
+	--colourful-tunis-tunis-10: #faf5f5;
+	--colourful-bogota-bogota: #facd9b;
+	--colourful-bogota-bogota-180: #5a4332;
+	--colourful-bogota-bogota-160: #7d5f46;
+	--colourful-bogota-bogota-140: #a58264;
+	--colourful-bogota-bogota-120: #cda57d;
+	--colourful-bogota-bogota-80: #ffdaaf;
+	--colourful-bogota-bogota-60: #ffe1c3;
+	--colourful-bogota-bogota-30: #faebd7;
+	--colourful-bogota-bogota-10: #fff5eb;
+	--colourful-osaka-osaka-120: #d27532;
+	--colourful-osaka-osaka-80: #fab473;
+	--colourful-osaka-osaka-60: #fac896;
+	--colourful-osaka-osaka-30: #fdd7b9;
+	--colourful-osaka-osaka-10: #ffebdc;
+	--colourful-osaka-osaka: #faa050;
+	--colourful-osaka-osaka-180: #642d0f;
+	--colourful-osaka-osaka-160: #7d3919;
+	--colourful-osaka-osaka-140: #99471b;
+	--colourful-porto-porto: #fa915f;
+	--colourful-porto-porto-180: #5f3020;
+	--colourful-porto-porto-160: #733c28;
+	--colourful-porto-porto-140: #8c4d32;
+	--colourful-porto-porto-120: #c8734b;
+	--colourful-porto-porto-80: #faa882;
+	--colourful-porto-porto-60: #fabea0;
+	--colourful-porto-porto-30: #fad2be;
+	--colourful-porto-porto-10: #ffe9dc;
+	--colourful-nice-nice: #ff7364;
+	--colourful-nice-nice-180: #642b2b;
+	--colourful-nice-nice-160: #7d3737;
+	--colourful-nice-nice-140: #a04242;
+	--colourful-nice-nice-120: #cd5a50;
+	--colourful-nice-nice-80: #ff8c82;
+	--colourful-nice-nice-60: #ffaaa0;
+	--colourful-nice-nice-30: #ffc8c3;
+	--colourful-nice-nice-10: #ffe3e1;
+	--colourful-havana-havana: #dc94c3;
+	--colourful-havana-havana-180: #64284b;
+	--colourful-havana-havana-160: #782d5f;
+	--colourful-havana-havana-140: #963773;
+	--colourful-havana-havana-120: #be64a0;
+	--colourful-havana-havana-80: #e6aacd;
+	--colourful-havana-havana-60: #ebbedc;
+	--colourful-havana-havana-30: #f0d5e6;
+	--colourful-havana-havana-10: #faebf3;
+	--colourful-tokyo-tokyo-140: #854385;
+	--colourful-tokyo-tokyo-120: #b06bb0;
+	--colourful-tokyo-tokyo-80: #e4aae4;
+	--colourful-tokyo-tokyo-60: #e9bae9;
+	--colourful-tokyo-tokyo-30: #f5dff5;
+	--colourful-tokyo-tokyo-10: #faeffa;
+	--colourful-tokyo-tokyo: #dc94dd;
+	--colourful-tokyo-tokyo-180: #552d55;
+	--colourful-tokyo-tokyo-160: #693769;
+	--colourful-seoul-seoul: #be93f8;
+	--colourful-seoul-seoul-180: #503473;
+	--colourful-seoul-seoul-160: #5a3c87;
+	--colourful-seoul-seoul-140: #7344b4;
+	--colourful-seoul-seoul-120: #986bd6;
+	--colourful-seoul-seoul-80: #c8a3f9;
+	--colourful-seoul-seoul-60: #d0b2fa;
+	--colourful-seoul-seoul-30: #e3d0fc;
+	--colourful-seoul-seoul-10: #f2e9fe;
+	--colourful-paris-paris: #9682eb;
+	--colourful-paris-paris-180: #3c2f6e;
+	--colourful-paris-paris-160: #46378c;
+	--colourful-paris-paris-140: #5543af;
+	--colourful-paris-paris-120: #7864d7;
+	--colourful-paris-paris-80: #aa9bf0;
+	--colourful-paris-paris-60: #beb4f5;
+	--colourful-paris-paris-30: #d7cdf5;
+	--colourful-paris-paris-10: #ebe6fa;
+	--colourful-oslo-oslo-140: #2d4691;
+	--colourful-oslo-oslo-120: #4669c8;
+	--colourful-oslo-oslo-80: #7d9bfa;
+	--colourful-oslo-oslo-60: #9bb4fa;
+	--colourful-oslo-oslo-30: #c5d3fd;
+	--colourful-oslo-oslo-10: #dce6ff;
+	--colourful-oslo-oslo: #5a82fa;
+	--colourful-oslo-oslo-180: #1e3064;
+	--colourful-oslo-oslo-160: #283c78;
+	--colourful-male-male: #64b9f5;
+	--colourful-male-male-180: #003755;
+	--colourful-male-male-160: #0a4469;
+	--colourful-male-male-140: #0f5582;
+	--colourful-male-male-120: #3c91cd;
+	--colourful-male-male-80: #87cdff;
+	--colourful-male-male-60: #a0d7ff;
+	--colourful-male-male-30: #c3e6ff;
+	--colourful-male-male-10: #e1f0ff;
+	--colourful-petersburg-petersburg: #7d9bcd;
+	--colourful-petersburg-petersburg-180: #32415d;
+	--colourful-petersburg-petersburg-160: #3c5073;
+	--colourful-petersburg-petersburg-140: #4b6491;
+	--colourful-petersburg-petersburg-120: #6984b2;
+	--colourful-petersburg-petersburg-80: #93afe1;
+	--colourful-petersburg-petersburg-60: #adc5ed;
+	--colourful-petersburg-petersburg-30: #cbdaf5;
+	--colourful-petersburg-petersburg-10: #e6eefa;
+	--colourful-tallin-tallin-140: #558796;
+	--colourful-tallin-tallin-120: #78acb9;
+	--colourful-tallin-tallin-80: #bce1eb;
+	--colourful-tallin-tallin-60: #cde9f0;
+	--colourful-tallin-tallin-30: #dcf0f5;
+	--colourful-tallin-tallin-10: #f0f7fa;
+	--colourful-tallin-tallin: #aad9e6;
+	--colourful-tallin-tallin-180: #2d555f;
+	--colourful-tallin-tallin-160: #376978;
+	--colourful-miami-miami: #5fcda0;
+	--colourful-miami-miami-180: #234437;
+	--colourful-miami-miami-160: #285543;
+	--colourful-miami-miami-140: #397b60;
+	--colourful-miami-miami-120: #479a78;
+	--colourful-miami-miami-80: #7dd7b4;
+	--colourful-miami-miami-60: #a0e1c8;
+	--colourful-miami-miami-30: #c3ebd7;
+	--colourful-miami-miami-10: #e1f5eb;
+	--colourful-manila-manila: #5abebe;
+	--colourful-manila-manila-180: #1e5055;
+	--colourful-manila-manila-160: #236469;
+	--colourful-manila-manila-140: #22777c;
+	--colourful-manila-manila-120: #36a0a6;
+	--colourful-manila-manila-80: #7bcbcb;
+	--colourful-manila-manila-60: #9cd8d8;
+	--colourful-manila-manila-30: #bde5e5;
+	--colourful-manila-manila-10: #eaf7f7;
+	--colourful-colombo-colombo-140: #325a64;
+	--colourful-colombo-colombo-120: #417887;
+	--colourful-colombo-colombo-80: #75aab9;
+	--colourful-colombo-colombo-60: #96c3cd;
+	--colourful-colombo-colombo-30: #c3d9e1;
+	--colourful-colombo-colombo-10: #dcebf0;
+	--colourful-colombo-colombo: #5096aa;
+	--colourful-colombo-colombo-180: #233f46;
+	--colourful-colombo-colombo-160: #25434b;
+	--colourful-dublin-dublin: #a5d05f;
+	--colourful-dublin-dublin-180: #32460f;
+	--colourful-dublin-dublin-160: #3c5814;
+	--colourful-dublin-dublin-140: #50701e;
+	--colourful-dublin-dublin-120: #799f3e;
+	--colourful-dublin-dublin-80: #b7d97f;
+	--colourful-dublin-dublin-60: #c9e39f;
+	--colourful-dublin-dublin-30: #d8ebba;
+	--colourful-dublin-dublin-10: #edf6df;
+	--colourful-bern-bern: #7dd27c;
+	--colourful-bern-bern-180: #234620;
+	--colourful-bern-bern-160: #285828;
+	--colourful-bern-bern-140: #387635;
+	--colourful-bern-bern-120: #5aa357;
+	--colourful-bern-bern-80: #97db96;
+	--colourful-bern-bern-60: #aae2aa;
+	--colourful-bern-bern-30: #c7ebc6;
+	--colourful-bern-bern-10: #e5f6e5;
+	--colourful-lima-lima: #3c6c50;
+	--colourful-lima-lima-180: #192a1e;
+	--colourful-lima-lima-160: #1e3428;
+	--colourful-lima-lima-140: #234131;
+	--colourful-lima-lima-120: #2d5a41;
+	--colourful-lima-lima-80: #648c73;
+	--colourful-lima-lima-60: #87a596;
+	--colourful-lima-lima-30: #afc3b9;
+	--colourful-lima-lima-10: #d7e1dc;
+	--colourful-riga-riga: #4b4b64;
+	--colourful-riga-riga-180: #1e1c28;
+	--colourful-riga-riga-160: #232332;
+	--colourful-riga-riga-140: #2d2d3c;
+	--colourful-riga-riga-120: #3c3c50;
+	--colourful-riga-riga-80: #706e82;
+	--colourful-riga-riga-60: #b9b7c3;
+	--colourful-riga-riga-30: #b9b7c3;
+	--colourful-riga-riga-10: #dcdce1;
+	--colourful-rome-rome: #734b46;
+	--colourful-rome-rome-180: #2d1e1b;
+	--colourful-rome-rome-160: #372522;
+	--colourful-rome-rome-140: #452e2b;
+	--colourful-rome-rome-120: #563a36;
+	--colourful-rome-rome-80: #916e6e;
+	--colourful-rome-rome-60: #aa9191;
+	--colourful-rome-rome-30: #c8b9b9;
+	--colourful-rome-rome-10: #e1dada;
+}
+
+svg {
+	transition: all ease 0.25s;
+}
+
+* {
+	font-family: var(--font-family);
+	font-style: normal;
+	color: var(--main-palette-primary);
+}
+
+html,
+body {
+	scrollbar-gutter: stable;
+}
+
+.back {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: row;
+	gap: 12px;
+	padding: 0px 12px 0px 0px;
+	width: 120px;
+	height: 24px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 133%;
+	color: var(--main-palette-secondary);
+	transition: all ease 0.25s;
+
+	svg {
+		path {
+			transition: all ease 0.25s;
+			fill: var(--main-palette-secondary);
+		}
+	}
+
+	&:hover {
+		color: var(--main-palette-primary);
+
+		svg {
+			path {
+				fill: var(--main-palette-primary);
+			}
+		}
+	}
+}
+
+.back-to-top {
+	position: fixed;
+	left: 0;
+	height: 100vh;
+	display: flex;
+	font-size: 15px;
+	width: 120px;
+	text-align: center;
+	padding: 18px 15px 18px 7px;
+	transition: background ease-in-out 0.2s;
+	background-color: var(--main-palette-white);
+	color: var(--main-palette-accent);
+	line-height: 16px;
+	justify-content: center;
+	opacity: 0;
+	transition: all ease 0.25s;
+
+	&.active {
+		opacity: 1;
+		cursor: pointer;
+		pointer-events: all;
+
+		&:hover {
+			background-color: var(--grey-grey-100);
+		}
+	}
+}
+
+
+.gap-24 {
+	gap: 24px;
+}
+
+.gap-32 {
+	gap: 32px;
+}
+
+article {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%;
+
+	h2 {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 117%;
+	}
+
+	p {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+	}
+
+	li {
+		margin-left: 25px;
+	}
+
+	&>a, &>p>a {
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--main-palette-accent);
+		transition: all ease 0.25s;
+
+		&:hover {
+			text-decoration: none;
+			opacity: 0.75;
+		}
+	}
+
+	div {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
+.cases {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 24px;
+	width: 100%;
+}
